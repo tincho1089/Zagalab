@@ -1,0 +1,119 @@
+@import 'styles/fonts.module.scss';
+@import 'styles/flex.module.scss';
+
+.hrSolid {
+  flex-grow: 1; /* estirar los HR para llenar el espacio vacío */
+  flex-basis: 0; /* permitir que los HR crezcan a lo largo del eje principal */
+  border: none;
+  border-top: 1px solid black; /* estilo de la línea HR */
+  margin: 10px 0; /* margen superior e inferior para separar los elementos */
+}
+
+.hrDotted {
+  flex-grow: 1; /* estirar los HR para llenar el espacio vacío */
+  flex-basis: 0; /* permitir que los HR crezcan a lo largo del eje principal */
+  border: none;
+  border-top: 2px dotted black;
+  margin: 10px 0; /* margen superior e inferior para separar los elementos */
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mainContainer {
+  @extend .flexRow;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.itemWrapper {
+  @extend .flexRow;
+  width: 100%;
+}
+
+.lastItemWrapper {
+  @extend .flexRow;
+  width: auto;
+}
+
+.customCircleButton {
+  width: 2rem!important;
+  height: 2rem!important;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  align-self: center;
+}
+
+.chkIcon {
+  font-size: 1.2rem !important;
+  color: white !important;
+}
+
+.leaseItemData {
+  @extend .flexColumn;
+  position: relative;
+}
+
+.leaseNameLimits {
+  @extend .fontsAb;
+  position: absolute;
+  top: 1rem;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+.leaseNameInterior {
+  @extend .leaseNameLimits;
+  align-self: center;
+}
+
+.leaseTimeLimits {
+  @extend .fontsSsl;
+  @extend .leaseNameLimits;
+  top: 2rem;
+  color: grey;
+  font-size: 1.1rem;
+}
+
+.leaseTimeInterior {
+  @extend .leaseTimeLimits;
+  align-self: center;
+}
+
+@media screen and (max-width: 860px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+  .leaseNameLimits {
+    position: relative;
+    top: 1rem;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .mobileView {
+    display: flex;
+    flex-direction: column;
+  }
+  .customCircleButton {
+    width: 4rem!important;
+    height: 4rem!important;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    align-self: center;
+  }
+  .chkIcon {
+    font-size: 2rem !important;
+    color: white !important;
+  }
+}

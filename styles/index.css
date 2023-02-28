@@ -1,0 +1,42 @@
+.body {
+  color: white;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: 'Apertura-Bold';
+  src: url('fonts/Apertura-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Apertura-BoldCondensed';
+  src: url('fonts/Apertura-BoldCondensed.otf');
+}
+
+@font-face {
+  font-family: 'Apertura-MediumCondensed';
+  src: url('fonts/Apertura-MediumCondensed.otf');
+}
+
+@font-face {
+  font-family: 'Skarpa-SemiLight';
+  src: url('fonts/skarpa-semi-light.otf');
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #eff0fe;
+  font-family: 'NetflixRegular', sans-serif;
+  user-select: none;
+}

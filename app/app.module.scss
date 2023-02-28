@@ -1,0 +1,26 @@
+@import 'styles/fonts.module.scss';
+@import 'styles/flex.module.scss';
+
+.titleSpace {
+    @extend .fontsAb;
+    flex: 10;
+}
+
+.wrapperContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.appWrapper {
+    margin: 2rem;
+    padding: 2rem;
+    max-width: 80%;
+}
+  
+@media (max-width: 480px) {
+    .appWrapper {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,51 @@
+@import 'styles/fonts.module.scss';
+@import 'styles/flex.module.scss';
+
+.Wrapper {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.titleSpace {
+  @extend .fontsAb;
+  flex: 10;
+}
+
+.totalAmountSpace {
+  @extend .flexRow;
+  flex: 1.2rem;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.lastUpdateSpace {
+  @extend .totalAmountSpace;
+  font-size: 0.95rem;
+}
+
+.headerContainer {
+  @extend .flexRow;
+}
+
+@media screen and (max-width: 800px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .totalAmountSpace {
+    @extend .flexRow;
+    align-items: flex-end;
+    white-space: nowrap;
+  }
+}
+
+.labelTimePeriod {
+  @extend .fontsSsl;
+  align-self: center;
+  margin-left: 0.3rem;
+  margin-top: 0.4rem;
+  font-size: 1.5rem;
+  color: grey;
+}
